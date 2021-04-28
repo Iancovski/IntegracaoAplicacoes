@@ -27,7 +27,6 @@ type
     pnlGeral: TPanel;
     pnlTitulo: TPanel;
     FDConnection: TFDConnection;
-    procedure btnCidadesClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -40,10 +39,5 @@ var
 implementation
 
 {$R *.dfm}
-
-procedure TfrmPrincipal.btnCidadesClick(Sender: TObject);
-begin
-  ShowMessage('Teste');
-end;
 
 end.
