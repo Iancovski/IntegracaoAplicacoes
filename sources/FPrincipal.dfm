@@ -96,6 +96,7 @@ object frmPrincipal: TfrmPrincipal
         ParentShowHint = False
         Wrap = True
         ShowHint = True
+        OnClick = btnCidadesClick
       end
       object btnMarcas: TToolButton
         Left = 0
