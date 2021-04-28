@@ -12,7 +12,5 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
-  Application.CreateForm(TfrmRootConsulta, frmRootConsulta);
-  Application.CreateForm(TfrmRootCadastro, frmRootCadastro);
   Application.Run;
 end.
