@@ -7,12 +7,12 @@ object frmRootCadastro: TfrmRootCadastro
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -13
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
   PixelsPerInch = 96
-  TextHeight = 13
+  TextHeight = 16
   object pnlGeral: TPanel
     Left = 0
     Top = 0
@@ -23,6 +23,13 @@ object frmRootCadastro: TfrmRootCadastro
     Color = 15789036
     ParentBackground = False
     TabOrder = 0
+    object lblCodigo: TLabel
+      Left = 28
+      Top = 130
+      Width = 39
+      Height = 16
+      Caption = 'C'#243'digo'
+    end
     object pnlTitulo: TPanel
       Left = 0
       Top = 0
@@ -84,5 +91,18 @@ object frmRootCadastro: TfrmRootCadastro
         ExplicitLeft = 8
       end
     end
+    object edtCodigo: TDBEdit
+      Left = 28
+      Top = 152
+      Width = 100
+      Height = 24
+      DataField = 'id'
+      Enabled = False
+      TabOrder = 2
+    end
+  end
+  object DataSource: TDataSource
+    Left = 616
+    Top = 112
   end
 end

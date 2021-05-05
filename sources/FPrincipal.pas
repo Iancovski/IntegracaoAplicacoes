@@ -27,6 +27,7 @@ type
     pnlGeral: TPanel;
     pnlTitulo: TPanel;
     FDConnection: TFDConnection;
+    procedure btnCidadesClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -39,5 +40,24 @@ var
 implementation
 
 {$R *.dfm}
+
+uses DCidades, FConsCidades;
+
+procedure TfrmPrincipal.btnCidadesClick(Sender: TObject);
+var
+  vForm: TfrmConsCidades;
+  vDm: TdmCidades;
+begin
+  try
+    vDm := TdmCidades.Create(Self);
+    vForm := TfrmConsCidades.Create(Self);
+
+    vDm.fdCidades.Open();
+
+    vForm.ShowModal;
+  finally
+    FreeAndNil(vForm);
+  end;
+end;
 
 end.

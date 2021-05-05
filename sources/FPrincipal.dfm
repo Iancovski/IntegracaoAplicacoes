@@ -96,6 +96,7 @@ object frmPrincipal: TfrmPrincipal
         ParentShowHint = False
         Wrap = True
         ShowHint = True
+        OnClick = btnCidadesClick
       end
       object btnMarcas: TToolButton
         Left = 0
@@ -1756,7 +1757,9 @@ object frmPrincipal: TfrmPrincipal
       'Password=masterkey'
       'Server=localhost'
       'Database=INTEGRACAO_APLICACOES'
+      'ExtendedMetadata=True'
       'DriverID=PG')
+    Connected = True
     LoginPrompt = False
     Left = 672
     Top = 72

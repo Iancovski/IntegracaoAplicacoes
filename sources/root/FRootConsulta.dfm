@@ -100,13 +100,15 @@ object frmRootConsulta: TfrmRootConsulta
         ExplicitLeft = 8
       end
     end
-    object DBGrid1: TDBGrid
+    object DBGrid: TDBGrid
       Left = 0
       Top = 100
       Width = 1264
       Height = 581
       Align = alClient
       Color = 15789036
+      DataSource = DataSource
+      ReadOnly = True
       TabOrder = 2
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
@@ -114,5 +116,9 @@ object frmRootConsulta: TfrmRootConsulta
       TitleFont.Name = 'Tahoma'
       TitleFont.Style = []
     end
+  end
+  object DataSource: TDataSource
+    Left = 616
+    Top = 112
   end
 end

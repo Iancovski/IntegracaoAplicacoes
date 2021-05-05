@@ -15,7 +15,8 @@ type
     btnExcluir: TSpeedButton;
     btnAlterar: TSpeedButton;
     btnIncluir: TSpeedButton;
-    DBGrid1: TDBGrid;
+    DBGrid: TDBGrid;
+    DataSource: TDataSource;
   private
     { Private declarations }
   public
