@@ -36,7 +36,6 @@ object frmPrincipal: TfrmPrincipal
       Caption = 'tbrMenu'
       Images = ImageList
       TabOrder = 0
-      ExplicitWidth = 33
       object btnPrincipal: TToolButton
         Left = 0
         Top = 0
@@ -76,6 +75,7 @@ object frmPrincipal: TfrmPrincipal
         ParentShowHint = False
         Wrap = True
         ShowHint = True
+        OnClick = btnTerceirosClick
       end
       object btnProdutos: TToolButton
         Left = 0
@@ -86,6 +86,7 @@ object frmPrincipal: TfrmPrincipal
         ParentShowHint = False
         Wrap = True
         ShowHint = True
+        OnClick = btnProdutosClick
       end
       object btnCidades: TToolButton
         Left = 0
@@ -116,6 +117,7 @@ object frmPrincipal: TfrmPrincipal
         ImageIndex = 7
         ParentShowHint = False
         ShowHint = True
+        OnClick = btnCategoriasClick
       end
     end
   end
@@ -129,10 +131,6 @@ object frmPrincipal: TfrmPrincipal
     Color = 15789036
     ParentBackground = False
     TabOrder = 1
-    ExplicitLeft = 552
-    ExplicitTop = 344
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object pnlTitulo: TPanel
       Left = 0
       Top = 0

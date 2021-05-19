@@ -7,7 +7,16 @@ uses
   FRootCadastro in '..\sources\root\FRootCadastro.pas' {frmRootCadastro},
   FConsCidades in '..\sources\FConsCidades.pas' {frmConsCidades},
   FCadCidades in '..\sources\FCadCidades.pas' {frmCadCidades},
-  DCidades in '..\sources\DCidades.pas' {dmCidades: TDataModule};
+  DCidades in '..\sources\DCidades.pas' {dmCidades: TDataModule},
+  FConsCategorias in '..\sources\FConsCategorias.pas' {frmConsCategorias},
+  FCadCategorias in '..\sources\FCadCategorias.pas' {frmCadCategorias},
+  DCategorias in '..\sources\DCategorias.pas' {dmCategorias: TDataModule},
+  FConsTerceiros in '..\sources\FConsTerceiros.pas' {frmConsTerceiros},
+  FCadTerceiros in '..\sources\FCadTerceiros.pas' {frmCadTerceiros},
+  DTerceiros in '..\sources\DTerceiros.pas' {dmTerceiros: TDataModule},
+  FConsProdutos in '..\sources\FConsProdutos.pas' {frmConsProdutos},
+  FCadProdutos in '..\sources\FCadProdutos.pas' {frmCadProdutos},
+  DProdutos in '..\sources\DProdutos.pas' {dmProdutos: TDataModule};
 
 {$R *.res}
 

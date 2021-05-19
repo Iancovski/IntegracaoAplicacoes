@@ -28,6 +28,9 @@ type
     pnlTitulo: TPanel;
     FDConnection: TFDConnection;
     procedure btnCidadesClick(Sender: TObject);
+    procedure btnCategoriasClick(Sender: TObject);
+    procedure btnTerceirosClick(Sender: TObject);
+    procedure btnProdutosClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,7 +44,25 @@ implementation
 
 {$R *.dfm}
 
-uses DCidades, FConsCidades;
+uses DCidades, FConsCidades, FConsCategorias, DCategorias, FConsTerceiros,
+  DTerceiros, FConsProdutos, DProdutos;
+
+procedure TfrmPrincipal.btnCategoriasClick(Sender: TObject);
+var
+  vForm: TfrmConsCategorias;
+  vDm: TdmCategorias;
+begin
+  try
+    vDm := TdmCategorias.Create(Self);
+    vForm := TfrmConsCategorias.Create(Self);
+
+    vDm.fdCategorias.Open();
+
+    vForm.ShowModal;
+  finally
+    FreeAndNil(vForm);
+  end;
+end;
 
 procedure TfrmPrincipal.btnCidadesClick(Sender: TObject);
 var
@@ -53,6 +74,40 @@ begin
     vForm := TfrmConsCidades.Create(Self);
 
     vDm.fdCidades.Open();
+
+    vForm.ShowModal;
+  finally
+    FreeAndNil(vForm);
+  end;
+end;
+
+procedure TfrmPrincipal.btnProdutosClick(Sender: TObject);
+var
+  vForm: TfrmConsProdutos;
+  vDm: TdmProdutos;
+begin
+  try
+    vDm := TdmProdutos.Create(Self);
+    vForm := TfrmConsProdutos.Create(Self);
+
+    vDm.fdProdutos.Open();
+
+    vForm.ShowModal;
+  finally
+    FreeAndNil(vForm);
+  end;
+end;
+
+procedure TfrmPrincipal.btnTerceirosClick(Sender: TObject);
+var
+  vForm: TfrmConsTerceiros;
+  vDm: TdmTerceiros;
+begin
+  try
+    vDm := TdmTerceiros.Create(Self);
+    vForm := TfrmConsTerceiros.Create(Self);
+
+    vDm.fdTerceiros.Open();
 
     vForm.ShowModal;
   finally

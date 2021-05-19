@@ -1,4 +1,4 @@
-unit FConsCidades;
+unit FConsCategorias;
 
 interface
 
@@ -8,10 +8,10 @@ uses
   Vcl.DBGrids, Vcl.Buttons, Vcl.ExtCtrls;
 
 type
-  TfrmConsCidades = class(TfrmRootConsulta)
-    procedure btnIncluirClick(Sender: TObject);
-    procedure btnAlterarClick(Sender: TObject);
+  TfrmConsCategorias = class(TfrmRootConsulta)
     procedure btnExcluirClick(Sender: TObject);
+    procedure btnAlterarClick(Sender: TObject);
+    procedure btnIncluirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -19,17 +19,17 @@ type
   end;
 
 var
-  frmConsCidades: TfrmConsCidades;
+  frmConsCategorias: TfrmConsCategorias;
 
 implementation
 
 {$R *.dfm}
 
-uses FCadCidades, DCidades, FireDAC.Comp.Client;
+uses DCategorias, FireDAC.Comp.Client, FCadCategorias;
 
-procedure TfrmConsCidades.btnAlterarClick(Sender: TObject);
+procedure TfrmConsCategorias.btnAlterarClick(Sender: TObject);
 var
-  vForm: TfrmCadCidades;
+  vForm: TfrmCadCategorias;
 begin
   inherited;
   if DataSource.DataSet.IsEmpty then begin
@@ -40,14 +40,14 @@ begin
   DataSource.DataSet.Edit;
 
   try
-    vForm := TfrmCadCidades.Create(Self);
+    vForm := TfrmCadCategorias.Create(Self);
     vForm.ShowModal;
   finally
     FreeAndNil(vForm);
   end;
 end;
 
-procedure TfrmConsCidades.btnExcluirClick(Sender: TObject);
+procedure TfrmConsCategorias.btnExcluirClick(Sender: TObject);
 begin
   inherited;
   if DataSource.DataSet.IsEmpty then begin
@@ -66,15 +66,15 @@ begin
   DataSource.DataSet.Refresh;
 end;
 
-procedure TfrmConsCidades.btnIncluirClick(Sender: TObject);
+procedure TfrmConsCategorias.btnIncluirClick(Sender: TObject);
 var
-  vForm: TfrmCadCidades;
+  vForm: TfrmCadCategorias;
 begin
   inherited;
   DataSource.DataSet.Append;
 
   try
-    vForm := TfrmCadCidades.Create(Self);
+    vForm := TfrmCadCategorias.Create(Self);
     vForm.ShowModal;
   finally
     FreeAndNil(vForm);
