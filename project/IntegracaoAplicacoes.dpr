@@ -16,7 +16,10 @@ uses
   DTerceiros in '..\sources\DTerceiros.pas' {dmTerceiros: TDataModule},
   FConsProdutos in '..\sources\FConsProdutos.pas' {frmConsProdutos},
   FCadProdutos in '..\sources\FCadProdutos.pas' {frmCadProdutos},
-  DProdutos in '..\sources\DProdutos.pas' {dmProdutos: TDataModule};
+  DProdutos in '..\sources\DProdutos.pas' {dmProdutos: TDataModule},
+  DMarcas in '..\sources\DMarcas.pas' {dmMarcas: TDataModule},
+  FCadMarcas in '..\sources\FCadMarcas.pas' {frmCadMarcas},
+  FConsMarcas in '..\sources\FConsMarcas.pas' {frmConsMarcas};
 
 {$R *.res}
 

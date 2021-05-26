@@ -31,6 +31,7 @@ type
     procedure btnCategoriasClick(Sender: TObject);
     procedure btnTerceirosClick(Sender: TObject);
     procedure btnProdutosClick(Sender: TObject);
+    procedure btnMarcasClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -45,7 +46,7 @@ implementation
 {$R *.dfm}
 
 uses DCidades, FConsCidades, FConsCategorias, DCategorias, FConsTerceiros,
-  DTerceiros, FConsProdutos, DProdutos;
+  DTerceiros, FConsProdutos, DProdutos, DMarcas, FConsMarcas;
 
 procedure TfrmPrincipal.btnCategoriasClick(Sender: TObject);
 var
@@ -74,6 +75,23 @@ begin
     vForm := TfrmConsCidades.Create(Self);
 
     vDm.fdCidades.Open();
+
+    vForm.ShowModal;
+  finally
+    FreeAndNil(vForm);
+  end;
+end;
+
+procedure TfrmPrincipal.btnMarcasClick(Sender: TObject);
+var
+  vForm: TfrmConsMarcas;
+  vDm: TdmMarcas;
+begin
+  try
+    vDm := TdmMarcas.Create(Self);
+    vForm := TfrmConsMarcas.Create(Self);
+
+    vDm.fdMarcas.Open();
 
     vForm.ShowModal;
   finally
